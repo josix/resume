@@ -1,0 +1,14 @@
+sudo: required
+dist: trusty # Ubuntu 14.04
+services: docker # Enables docker
+script:
+  - wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
+  - chmod +x latexdockercmd.sh
+  - ./latexdockercmd.sh latexmk -pdf ./en/resume-en.tex -outdir=./_build
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: _build
+  on:
+    branch: main
