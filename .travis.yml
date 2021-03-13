@@ -6,7 +6,7 @@ script:
   - chmod +x latexdockercmd.sh
   - ./latexdockercmd.sh latexmk -pdf ./en/resume-en.tex -outdir=./_build
   - cd zh/
-  - ./latexdockercmd.sh latexmk -xelatex ./resume-zh.tex -outdir=../_build
+  - ../latexdockercmd.sh latexmk -xelatex ./resume-zh.tex -outdir=../_build
 deploy:
   provider: pages
   skip_cleanup: true
