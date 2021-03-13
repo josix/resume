@@ -1,0 +1,309 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    \textbf{\Huge \scshape Wei-Sheng Wang (Wilson Wang)} \\ \vspace{1pt}
+    \small +886-919-272-449 $|$ \href{mailto:josixwang@gmail.com}{\underline{josixwang@gmail.com}} $|$ 
+    \href{https://www.linkedin.com/in/josixwang/}{\underline{linkedin.com/in/josixwang}} $|$
+    \href{https://josix.tw}{\underline{josix.tw}} $|$
+    \href{https://github.com/josix}{\underline{github.com/josix}}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Research Assistant (Part-Time)}{Oct. 2017 -- Present}
+      {National Chengchi University, CLIP Lab}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Developed a recommendation algorithm for KKTIX, the online ticketing platform under KKBOX Group}
+        \resumeItem{Designed {\it Preference-Content Convolution (PCC)} graph learning algorithm and validated it through {\it Query-Based} experiments }
+        \resumeItem{PCC increase precision by 2.5 times in offline testing and it is deployed and launched in August 2019}
+        \resumeItem{Developed a full-stack recommender system using Django, ReactJS, and ElasticSeaarch}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Server Administration}{Aug. 2019 -- Present}
+      {National Chengchi University, CLIP Lab}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Manage server accounts through building NIS server}
+        \resumeItem{Avoid brute-force attack through configuring Fail2ban and sshd\_config configurations}
+        \resumeItem{Built a sandbox environment for external data delivery through ChrootDirectory}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Cloud Support Engineer Intern}{Feb. 2020 -- Feb. 2021}
+      {Amazon Web Services (AWS)}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Improved support engineer working process through building automated scripts}
+        \resumeItem{Implemented multilingual sentences clustering to improve language translation quality}
+        \resumeItem{Cooperate with overseas teams in Seattle}
+        \resumeItem{Technical stacks - JavaScript, GreaseMonkey, DynamoDB, S3}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Frontend Developer (Contractor)}{Feb. 2020 -- May. 2020}
+      {PAMO Law Office}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Modularize the legacy code to be more maintainable}
+        \resumeItem{Refactor class to function components and Hooks in ReactJS}
+        \resumeItem{Technical stacks - ReactJS, Redux, Create React App, RxJS}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Frontend Developer Intern}{Aug. 2017 -- Jun. 2018}
+      {Rytass Corp.}{Taipei, Taiwan}
+      \resumeItemListStart
+        \resumeItem{Developed CMS user interface including form validation, image uploader, article lists, etc.}
+        \resumeItem{Developed RWD layout for the client websites}
+        \resumeItem{Collaborate with backend developers to design and implement RESTful API and Graph API}
+        \resumeItem{Technical stacks - ReactJS, Redux, react-apollo, Webpack, Babel}
+      \resumeItemListEnd
+% -----------Multiple Positions Heading-----------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+
+
+
+%-----------PROJECTS-----------
+
+\section{Projects}
+    \resumeSubHeadingListStart
+      \resumeProjectHeading{\large{\textbf{Work Project}}}{}
+      \resumeProjectHeading
+         {\textbf{MOST Review Candidate Recommendation} $|$ \emph{Django, React, Docker, Elasticsearch}}{Jun. 2019 -- Jan. 2020}
+      \resumeItemListStart
+        \resumeItem{Developed backend API and user interface for recommendation service}
+        \resumeItem{Designed re-ranking recommendation mechanism that combining keyword-based recommendations and ML-based recommendations}
+      \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{KKTIX Cold Start Recommendation}  \emph{\href{https://github.com/josix/NEPT}{- project link}} $|$ \emph{Python, Graph Embedding}}  {Oct. 2017 -- Feb. 2019}
+        \resumeItemListStart
+        \resumeItem{Developed {\it Preference-Content Convolution (PCC)} graph learning algorithm and the offline testing experiments}
+        \resumeItem{Developed a full workflow for running data preprocessing, training, testing}
+        \resumeItemListEnd
+      \resumeProjectHeading{\large{\textbf{Open Source Contributions}}}{}
+      \resumeProjectHeading
+        {\textbf{commitizen-tools}  \emph{\href{https://commitizen-tools.github.io/commitizen/}{- project link}} $|$  \emph{Python, Poetry, pre-commit}}  {June 2020 - Present}
+        \resumeItemListStart
+           \resumeItem{A tool to define a standard way of committing rules and communicating them through CLI}
+           \resumeItem{Reinforce the check feature to check whether it conforms to the conventional writing and list the non-conforming ones}
+           \resumeItem{Update to add more unit tests}
+        \resumeItemListEnd
+        \resumeProjectHeading
+        {\textbf{PyCon TW 2019 Official Website}  \emph{\href{https://tw.pycon.org/2019/zh-hant/}{- project link}} $|$  \emph{Django, Saas}}  {Feb. 2019 - Sep. 2019}
+        \resumeItemListStart
+           \resumeItem{Responsible for developing the landing page, navigation bar, ticketing page}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Warehouse Translation}  \emph{\href{https://hosted.weblate.org/projects/pypa/warehouse/zh_Hant/}{- project link}}}  {Sep. 2019 - Feb. 2020}
+        \resumeItemListStart
+           \resumeItem{Add zh-tw translations to the new versioned PyPI (warehouse)}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Python Official Documents Translation}  \emph{\href{https://github.com/python/python-docs-zh-tw}{- project link}}}  {June 2018 - Oct. 2018}
+        \resumeItemListStart
+           \resumeItem{Responsible for translating chapter 9. Classes of the  tutorial to zh-tw}
+        \resumeItemListEnd
+      \resumeProjectHeading
+        {\textbf{Others} \emph{}}  {}
+        \resumeItemListStart
+           \resumeItem{\href{https://github.com/exercism/python}{exercism/python} - Update problem testcases} 
+           \resumeItem{\href{https://github.com/pycontw/CCIP-HDP}{pycontw/CCIP-HDP}, \href{https://github.com/pycontw/session-video-publisher}{session-video-publisher} - Fix bugs} 
+        \resumeItemListEnd
+
+      \resumeProjectHeading{\large{\textbf{Side Project}}}{}
+      \resumeProjectHeading
+          {\textbf{Josix's Blog}  \emph{\href{https://josix.tw}{- project link}} $|$  \emph{Gatsby, Netlify}}  {Aug. 2020 - Present}
+          \resumeItemListStart
+            \resumeItem{Personal tech noting blog built by gatsby and netlify}
+            \resumeItem{Features include GA tracking, simple SEO configuration, table of contents.}
+            \resumeItem{Deep dive into tech tools like pyenv, pipx, etc.}
+          \resumeItemListEnd
+      \resumeProjectHeading
+          {\textbf{Online Judge CLI}  \emph{\href{https://github.com/josix/oj-cli}{- project link}} $|$  \emph{Python, cURL}}  {Sep. 2020}
+          \resumeItemListStart
+            \resumeItem{Python based CLI that allowing students to upload their homework to the online judge system}
+            \resumeItem{Features include authentication, uploading, downloading problems from the system}
+          \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+    
+    
+    
+%-----------Community Involvement-----------
+
+\section{Community Involvemnet}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading{\large{\textbf{PyCon Taiwan}}}{Aug. 2019 -- Present}
+        \resumeSubSubheading
+         {Infra Squad Lead}{}
+          \resumeItemListStart
+            \resumeItem{Responsible for organizing team members to deliver tools for improving crew operation process}
+          \resumeItemListEnd
+        \resumeSubSubheading
+         {Development Member}{}
+          \resumeItemListStart
+            \resumeItem{Developed official website through using Django and Sass}
+            \resumeItem{Responsible for developing navigation bar, landing, ticketing page including RWD layout (2019)}
+          \resumeItemListEnd
+        \resumeProjectHeading{\large{\textbf{D4SG - Convenient Kanban for Wastewater Prevention}}}{Jul. 2017 -- Jan. 2018}
+        \resumeSubSubheading
+         {Volunteer}{}
+          \resumeItemListStart
+            \resumeItem{The plan aims to reduce the information gap between the Hsinchu County government, the public, and manufacturers, improve the efficiency of inspections, and promote the self-discipline of various manufacturers through public information.}
+            \resumeItem{Responsible for crawling the company's financial report and display it in the kanban by using Selenium}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {National Chengchi University}{Taipei, Taiwan}
+      {M.S. in Computer Science}{Feb.2020 -- Present}
+    \resumeItemListStart
+        \resumeItem{Members in Computational Linguistics and Information Processing Lab (CLIP Lab)}
+        \resumeItem{Research interests span the areas of information retrieval, recommender systems, natural language processing}
+        \resumeItem{\textbf{Related taken courses}:
+        Distributed System, Cloud Big Data Service Practices, Web Search and Mining}
+    \resumeItemListEnd
+    \resumeSubheading
+      {National Chengchi University}{Taipei, Taiwan}
+      {B.S. in Computer Science and B.A. in Land Economics (Geometry Program)}{Sep. 2014 -- Feb. 2020}
+    \resumeItemListStart
+        \resumeItem{\textbf{Related taken courses}:
+        Programming Language, Software Engineering, Database System}
+    \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%
+%-----------PROGRAMMING SKILLS-----------
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: Python,  JavaScript, HTML/CSS, Shell Script, C/C++} \\
+     \textbf{Libraries and Frameworks}{: Django, PyTorch, ReactJS, NumPy} \\
+     \textbf{Developer Tools}{: zsh, Git, Docker, AWS, VS Code, ElasticSearch}
+    }}
+ \end{itemize}
+
+
+
+%-------------------------------------------
+\end{document}
