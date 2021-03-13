@@ -5,6 +5,7 @@ script:
   - wget https://raw.githubusercontent.com/blang/latex-docker/master/latexdockercmd.sh
   - chmod +x latexdockercmd.sh
   - ./latexdockercmd.sh latexmk -pdf ./en/resume-en.tex -outdir=./_build
+  - ./latexdockercmd.sh latexmk -xelatex ./zh/resume-zh.tex -outdir=./_build
 deploy:
   provider: pages
   skip_cleanup: true
