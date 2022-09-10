@@ -1,0 +1,31 @@
+name: main branch updated
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  publish-github-page:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out
+        uses: actions/checkout@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+      - name: Install latexmk
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y texlive-full
+      - name: Build docs
+        run: |
+          latexmk -pdf ./en/resume-en.tex -outdir=./_build
+          latexmk -c -pdf ./en/resume-en.tex -outdir=./_build
+
+      - name: Push documentation to Github Page
+        uses: peaceiris/actions-gh-pages@v3.8.0
+        with:
+          personal_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./_build
