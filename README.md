@@ -1,2 +1,2 @@
 # resume
-- [resume (en)](https://josix.github.io/resume/resume-en.pdf)
+- [resume (en)](https://josix.github.io/resume/resume.pdf)

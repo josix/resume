@@ -1,0 +1,56 @@
+\subsection{{Data Engineer / Tresl, Inc. \hfill Palo Alto, CA \> Oct 2022 --- Nov 2022}}
+\subtext{airbyte}
+\begin{zitemize}
+\item Decoupled the customer data extraction and loading workflow from Airflow by using Airbyte. Reduce the complexity of the DAGs and the CPU usage of Airflow by around 20\%.
+\item Built the ELT pipelines that extract data from various sources, load them into the GCS and send them to BigQuery for further analysis.
+\item Migrated the legacy version of Airbyte to the up-to-date one with 140+ squashed merged commits including 500K+ additions and 280K+ deletions.
+\end{zitemize}
+
+
+\subsection{{ML Engineer / Miso Technologies, Inc.  \hfill San Francisco, CA \> May 2021 --- May 2022}}
+
+\subtext{miso-webhook}
+\begin{zitemize}
+\item Responsible for building the ETL pipelines for ingesting data from Shopify API and sending them into internal data API in around 80 requests per minute from Shopify Webhook API.
+\item Reduce response time by 80\% by using multi-layer caching consisting of memory cache and Redis cache to avoid taking too much time on fetching authentication data from the internal API.
+\end{zitemize}
+
+
+\subtext{string-index}
+\begin{zitemize}
+\item Responsible for building a key-value store for mapping productID/userID into integer and ndarray at performance around 4 ms per 11 million query words.
+\item Reduce the memory usage by 85\% with 11 million tokens input by switching the hash map into DAWG to record the tokens. Persist the tokens in the disk and achieve the purpose of sharing memory through mmap.
+\item Decoupled the string-index component from the code base to make it easier to maintain and extend. Build a standalone package with complete usage documentation, 100\% unit test coverage, and a unified coding style conforming to the black, pylint rules.
+\end{zitemize}
+
+\subtext{python-package-template}
+\begin{zitemize}
+\item Shorten development environment setup time by 60\% by using Cookiecutter. Supporting virtual environment management tools like pipenv/poetry, pre-commit hooks, linting, testing, formatting commands, and GitLab CI/CD, Dockerfile configurations.
+\end{zitemize}
+
+\subsection{{Research Assistant / National Chengchi University, CLIP Lab \hfill Taipei, Taiwan \> Oct. 2017 --- May. 2021}}
+
+\subtext{KKTIX Ticket Recommender}
+\begin{zitemize}
+\item Developed a graph-based hybrid recommendation algorithm that increases MAP@5 by 2.5 times in offline evaluation for solving the complete cold start problem in KKTIX, the online ticketing platform under KKCompany Group.
+\end{zitemize}
+
+\subtext{MOST Review Candidate Recommender}
+\begin{zitemize}
+\item Developed a multi-path recall recommendation system that re-ranking candidate items from item-to-item \footnote{i2i models: ElasticSearch, ElasticSearch LTR, and word2vec} and user-to-item \footnote{u2i models: CF, graph based CF like LINE and DeepWalk models} strategies for recommending 10K+ PDF documents to 2000+ users.
+\end{zitemize}
+
+\subsection{{Server Administration / National Chengchi University, CLIP Lab \hfill Taipei, Taiwan \> Aug. 2019 -- May. 2021}}
+\begin{zitemize}
+  \item Responsible for managing around 50+ accounts across 5 servers through NIS. Setting up Prometheus and Grafana for monitoring the CPU, memory, and disk usage of servers with the alerts sending warning messages to Slack channels.
+  \item Provide external partners with accounts having a limited sandbox environment through ChrootDirectory for uploading data without using external services like Google Drive for saving 3-5 days of uploading/downloading time and communication time.
+  \item Prevent daily 10k+ brute-force attacks on one server by setting no password login and setting up fail2ban to block the attackers.
+\end{zitemize}
+
+\subsection{{Clous Support Enginner Intern / Amazon Web Services, Inc. \hfill Taipei, Taiwan \> Feb. 2020 -- Feb. 2021}}
+
+\subtext{Ticket Category Examinator}
+\begin{zitemize}
+\item Responsible for building a browser extension used to check the wrong category of tickets and provide the possible options for engineers to choose from. The extension is used by 100+ engineers to reduce the time of categorizing tickets by 14\%. Built by using GreaseMonkey and backed by AWS S3 for storing static metadata data.
+\end{zitemize}
+
