@@ -2,7 +2,7 @@
 \subtext{airbyte}
 \begin{zitemize}
 \item Decoupled the customer data extraction and loading workflow from Airflow by using Airbyte. Reduce the complexity of the DAGs and the CPU usage of Airflow by around 20\%.
-\item Built the ELT pipelines that extract data from various sources, load them into the GCS and send them to BigQuery for further analysis.
+\item Built the ETL pipelines that extract data from various sources, load them into the GCS and send them to BigQuery for further analysis.
 \item Migrated the legacy version of Airbyte to the up-to-date one with 140+ squashed merged commits including 500K+ additions and 280K+ deletions.
 \end{zitemize}
 
@@ -18,7 +18,7 @@
 
 \subtext{string-index}
 \begin{zitemize}
-\item Responsible for building a key-value store for mapping productID/userID into integer and ndarray at performance around 4 ms per 11 million query words.
+\item Responsible for building a key-value store for mapping productID/userID into integer and ndarray at a performance around 4 ms per 11 million query words, which is the core component used in search and recommendation models.
 \item Reduce the memory usage by 85\% with 11 million tokens input by switching the hash map into DAWG to record the tokens. Persist the tokens in the disk and achieve the purpose of sharing memory through mmap.
 \item Decoupled the string-index component from the code base to make it easier to maintain and extend. Build a standalone package with complete usage documentation, 100\% unit test coverage, and a unified coding style conforming to the black, pylint rules.
 \end{zitemize}
@@ -47,7 +47,7 @@
   \item Prevent daily 10k+ brute-force attacks on one server by setting no password login and setting up fail2ban to block the attackers.
 \end{zitemize}
 
-\subsection{{Clous Support Enginner Intern / Amazon Web Services, Inc. \hfill Taipei, Taiwan \> Feb. 2020 -- Feb. 2021}}
+\subsection{{Cloud Support Engineer Intern / Amazon Web Services, Inc. \hfill Taipei, Taiwan \> Feb. 2020 -- Feb. 2021}}
 
 \subtext{Ticket Category Examinator}
 \begin{zitemize}
